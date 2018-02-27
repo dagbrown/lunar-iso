@@ -73,6 +73,5 @@ ISO_MODULES=acl            \
             vim            \
             wget           \
             which          \
-            xfsprogs       \
             xz             \
             zlib
