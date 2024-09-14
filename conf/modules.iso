@@ -11,6 +11,7 @@ ISO_MODULES=acl            \
             dialog         \
             diffutils      \
             dosfstools     \
+            dracut         \
             e2fsprogs      \
             e3             \
             ed             \
