@@ -73,7 +73,6 @@ goodbye()
     kill `jobs -p` &> /dev/null
     touch /run/initramfs/.need_shutdown
     touch /lib/modules/$(uname -r)/initrd
-    [ -x /usr/bin/cpio ] || lunar resurrect cpio
     mount --bind /run/initramfs/live/isolinux/initrd /lib/modules/$(uname -r)/initrd
     /usr/lib/dracut/dracut-initramfs-restore
     shutdown -r now
