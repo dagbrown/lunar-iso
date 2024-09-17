@@ -71,6 +71,8 @@ goodbye()
   PROMPT="Reboot now?"
   if confirm "$PROMPT" "--defaultno"; then
     kill `jobs -p` &> /dev/null
+    touch /run/initramfs/.need_shutdown
+    /usr/lib/dracut/dracut-initramfs-restore
     shutdown -r now
     exit 0
   else
